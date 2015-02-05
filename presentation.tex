@@ -21,27 +21,6 @@
 %% Appearance
 \usetheme{Madrid}
 
-% souce code highlighting
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\lstset{frame=tb,
-  aboveskip=3mm,
-  belowskip=3mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle={\small\ttfamily},
-  numbers=none,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  breakatwhitespace=true,
-  tabsize=3
-}
-
 
 \begin{document}
 
@@ -64,7 +43,7 @@
 \end{frame}
 
 %% Education
-\begin{frame}[t]
+\begin{frame}[c]
   \frametitle{The Enterprise of Education}
   \begin{block}{}
     \emph{ Education should prepare young people for jobs that do not
@@ -73,21 +52,13 @@
   \end{block}
 \end{frame}
 
+\section{Imperative and Functional Views of the World}
+
 \begin{frame}[fragile,t]
   \frametitle{Imperative World by Example}
-  
-  % C code for adding numbers
-  \begin{minted}[linenos,frame=lines,fontsize=\footnotesize]{c}
-    /* Adding numbers from 1 to 5, inclusive */
-    
-    int acc = 0;
-    int i = 1;
 
-    while (i <= 5) {
-      acc = acc + 1;
-      i = i + 1;
-    }
-  \end{minted}
+  % C code for adding numbers
+  \inputminted[fontsize=\footnotesize,linenos=true]{c}{code/slides/sumfive.c}
 
   Let's think about it for a while.
 
@@ -96,48 +67,30 @@
   \item What are the elements that make up that model?
   \item Is it all relevant to our problem of adding up a sequence of numbers?
   \end{itemize}
-  
+
 \end{frame}
 
-%% Imperative and Functional
 \begin{frame}[fragile,t]
   \frametitle{Functional World by Example}
-    
-  % Haskell code for adding numbers
-  \begin{minted}[linenos,frame=lines,fontsize=\footnotesize]{haskell}
-    sum [1..5]
 
-    -- Definition of the sum function
-    sum [] = 0
-    sum listOfNumbers = head listOfNumbers + sum (tail listOfNumbers)
-    
-  \end{minted}
+  % Haskell code for adding numbers
+  \inputminted[fontsize=\footnotesize,linenos=true]{haskell}{code/slides/SumFive.hs}
 
   Answers to previous questions for you:
   \begin{itemize}
   \item Computation by calculation. Not commands and their execution.
-  \item Hides details of execution. Let's us have more time to think about the problem.
+  \item Hides details of execution. Lets us have more time to think about the problem.
   \end{itemize}
-  
+
 \end{frame}
 
 \begin{frame}[fragile,t]
   \frametitle{What gives?}
-  
+
   \begin{multicols}{2}
 
     % Left column
-    \begin{minted}[frame=lines,fontsize=\tiny]{c}
-      /* Adding numbers from 1 to 5, inclusive */
-      
-      int acc = 0;
-      int i = 1;
-
-      while (i <= 5) {
-        acc = acc + 1;
-        i = i + 1;
-      }
-    \end{minted}
+    \inputminted[fontsize=\tiny]{c}{code/slides/sumfive.c}
 
     \begin{itemize}
     \item Book-keeping of events in time.
@@ -145,47 +98,96 @@
     \end{itemize}
 
     \columnbreak
-    
+
     % Right column
-    \begin{minted}[frame=lines,fontsize=\tiny]{haskell}
-      sum [1..5]
-      
-      -- Definition of the sum function
-      sum [] = 0
-      sum (x:xs) = x + sum xs
-    \end{minted}
+    \inputminted[fontsize=\tiny]{haskell}{code/slides/SumFiveShort.hs}
 
     \begin{itemize}
     \item Nice clean functional abstraction.
     \item Order of events that happen is based on data dependencies.
     \end{itemize}
-    
+
   \end{multicols}
 
 \end{frame}
 
-  
+% Yet another example
+\begin{frame}[fragile,t]
+  \frametitle{Yet Another Example}
 
+  % C code
+  \emph{Imperative Code}
+  \inputminted[frame=bottomline,fontsize=\footnotesize]{c}{code/slides/primes.c}
 
+  \vfill
+
+  % Haskell code
+  \emph{Functional Code}
+  \inputminted[frame=bottomline,fontsize=\footnotesize]{haskell}{code/slides/Primes.hs}
+
+\end{frame}
+
+\begin{frame}[fragile,t]
+  \frametitle{Key Points to Notice}
+
+  \begin{multicols}{2}
+    % C code column
+    \emph{Imperative Code}
+    \inputminted[fontsize=\tiny]{c}{code/slides/primes.c}
+
+    \begin{itemize}
+    \item Filtering primes and collecting them interwined. Looks more efficient.
+    \item We lost modularity when the above two operations mixed.
+    \end{itemize}
+
+    \columnbreak
+
+    % Haskell code column
+    \emph{Functional Code}
+    \inputminted[fontsize=\tiny]{haskell}{code/slides/Primes.hs}
+
+    \begin{itemize}
+    \item First filter primes from the sequence. Then pick two out of them. Perfect!
+    \item Is it less efficient? Are you checking primality for every number in the range?
+    \end{itemize}
+
+  \end{multicols}
+  \vfill
+  \center{\emph{That's being lazy with style!}}
+
+\end{frame}
+
+% About Haskell
 \begin{frame}[t]
   \frametitle{What's Haskell?}
-  
+
   Haskell is
   \begin{itemize}
   \item{\bf Purely Funcional} \\
     \textit{You have definitions not assignments. No mutation.}
+
   \item{\bf Lazy} \\
     \textit{If something doesn't need to be computed, it will never be.}
+
   \item{\bf Higher Order} \\
     \textit{Functions are first-class people. Like values, they can be input to other functions.}
+
   \item{\bf General Purpose} \\
     \textit{It's not specific to any domain, e.g. SQL or html.}
+
   \end{itemize}
 \end{frame}
 
+% History
 \begin{frame}[t]
   \frametitle{A little bit of History}
-  
+  Inspired by the paper: Being lazy with class, a history of Haskell.
+
+
+\end{frame}
+
+\begin{frame}[t]
+
 \end{frame}
 
 \end{document}
