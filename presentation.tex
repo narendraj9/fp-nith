@@ -11,15 +11,25 @@
 \date{\today}
 
 % Common packages
-\usepackage{graphics}
-\usepackage{helvet}
+\usepackage{graphicx}
 \usepackage{fancybox}
-\usepackage{listings}
 \usepackage{minted}
 \usepackage{multicol}
 
 %% Appearance
 \usetheme{Madrid}
+
+% graphics settings
+\graphicspath{{./images/}}
+\DeclareGraphicsExtensions{.png,.jpg}
+
+\newenvironment{fimage}[2][\textheight]
+               { \begin{figure}
+                   \centering
+                   \includegraphics[width=\textwidth, height=#1, keepaspectratio]{#2}
+               }
+               { \end{figure} }
+
 
 
 \begin{document}
@@ -137,7 +147,8 @@
 
     \begin{itemize}
     \item Filtering primes and collecting them interwined. Looks more efficient.
-    \item We lost modularity when the above two operations mixed.
+    \item We lost modularity when the above two operations mixed, .i.e no separation of
+      \textit{generation} from \textit{selection}.
     \end{itemize}
 
     \columnbreak
@@ -178,15 +189,51 @@
   \end{itemize}
 \end{frame}
 
+\section{History of Haskell}
+
 % History
 \begin{frame}[t]
   \frametitle{A little bit of History}
-  Inspired by the paper: Being lazy with class, a history of Haskell.
-
-
+  \texttt{Credits: Simon Peyton Jones}
+  \begin{fimage}[18em]{beginnings} \end{fimage}
 \end{frame}
 
 \begin{frame}[t]
+  \frametitle{A little bit of History}
+  \texttt{Credits: Simon Peyton Jones}
+  \begin{fimage}[18em]{haskell98} \end{fimage}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{History of Research Langauges}
+  \texttt{Credits: Simon Peyton Jones}
+  \begin{fimage}{historyResearchLang} \end{fimage}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Successful Research Languages}
+  \texttt{Credits: Simon Peyton Jones}
+  \begin{fimage}{successfulRLang} \end{fimage}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{C++/Java/Perl/Ruby}
+  \texttt{Credits: Simon Peyton Jones}
+  \begin{fimage}{immortalLanguages} \end{fimage}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Where's Haskell?}
+  \texttt{Credits: Simon Peyton Jones}
+  \begin{fimage}[18em]{haskellHistory} \end{fimage}
+\end{frame}
+
+
+% Perks of being a Haskeller
+\section{Perks of Being a Haskeller}
+
+\begin{frame}
+
 
 \end{frame}
 
