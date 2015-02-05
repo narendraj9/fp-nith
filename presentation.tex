@@ -1,0 +1,191 @@
+%
+% Functional Programming
+%
+
+\documentclass{beamer}
+
+\title{Functional Programming in Haskell}
+\subtitle{$\lambda$}
+
+\author{Narendra Joshi}
+\date{\today}
+
+% Common packages
+\usepackage{graphics}
+\usepackage{helvet}
+\usepackage{fancybox}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{multicol}
+
+%% Appearance
+\usetheme{Madrid}
+
+% souce code highlighting
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\begin{document}
+
+% Title
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Outline
+\begin{frame}[t]
+  \frametitle{Outline}
+
+  \begin{itemize}
+  \item{Functional view of the world}
+  \item{Haskell and its brief history}
+  \item{Perks of being a Haskeller}
+  \item{Logistics of the workshop}
+  \end{itemize}
+
+\end{frame}
+
+%% Education
+\begin{frame}[t]
+  \frametitle{The Enterprise of Education}
+  \begin{block}{}
+    \emph{ Education should prepare young people for jobs that do not
+      yet exist, using technologies that have not been invented,
+      to solve problems of which we are not yet aware.}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile,t]
+  \frametitle{Imperative World by Example}
+  
+  % C code for adding numbers
+  \begin{minted}[linenos,frame=lines,fontsize=\footnotesize]{c}
+    /* Adding numbers from 1 to 5, inclusive */
+    
+    int acc = 0;
+    int i = 1;
+
+    while (i <= 5) {
+      acc = acc + 1;
+      i = i + 1;
+    }
+  \end{minted}
+
+  Let's think about it for a while.
+
+  \begin{itemize}
+  \item What is the model of computation in our mind?
+  \item What are the elements that make up that model?
+  \item Is it all relevant to our problem of adding up a sequence of numbers?
+  \end{itemize}
+  
+\end{frame}
+
+%% Imperative and Functional
+\begin{frame}[fragile,t]
+  \frametitle{Functional World by Example}
+    
+  % Haskell code for adding numbers
+  \begin{minted}[linenos,frame=lines,fontsize=\footnotesize]{haskell}
+    sum [1..5]
+
+    -- Definition of the sum function
+    sum [] = 0
+    sum listOfNumbers = head listOfNumbers + sum (tail listOfNumbers)
+    
+  \end{minted}
+
+  Answers to previous questions for you:
+  \begin{itemize}
+  \item Computation by calculation. Not commands and their execution.
+  \item Hides details of execution. Let's us have more time to think about the problem.
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}[fragile,t]
+  \frametitle{What gives?}
+  
+  \begin{multicols}{2}
+
+    % Left column
+    \begin{minted}[frame=lines,fontsize=\tiny]{c}
+      /* Adding numbers from 1 to 5, inclusive */
+      
+      int acc = 0;
+      int i = 1;
+
+      while (i <= 5) {
+        acc = acc + 1;
+        i = i + 1;
+      }
+    \end{minted}
+
+    \begin{itemize}
+    \item Book-keeping of events in time.
+    \item Details of the machine spill up to our mental model.
+    \end{itemize}
+
+    \columnbreak
+    
+    % Right column
+    \begin{minted}[frame=lines,fontsize=\tiny]{haskell}
+      sum [1..5]
+      
+      -- Definition of the sum function
+      sum [] = 0
+      sum (x:xs) = x + sum xs
+    \end{minted}
+
+    \begin{itemize}
+    \item Nice clean functional abstraction.
+    \item Order of events that happen is based on data dependencies.
+    \end{itemize}
+    
+  \end{multicols}
+
+\end{frame}
+
+  
+
+
+\begin{frame}[t]
+  \frametitle{What's Haskell?}
+  
+  Haskell is
+  \begin{itemize}
+  \item{\bf Purely Funcional} \\
+    \textit{You have definitions not assignments. No mutation.}
+  \item{\bf Lazy} \\
+    \textit{If something doesn't need to be computed, it will never be.}
+  \item{\bf Higher Order} \\
+    \textit{Functions are first-class people. Like values, they can be input to other functions.}
+  \item{\bf General Purpose} \\
+    \textit{It's not specific to any domain, e.g. SQL or html.}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{A little bit of History}
+  
+\end{frame}
+
+\end{document}
