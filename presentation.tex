@@ -7,7 +7,10 @@
 \title{Functional Programming in Haskell}
 \subtitle{$\lambda$}
 
-\author{Narendra Joshi}
+\author{Narendra Joshi \\
+  \medskip
+  narendraj9@gmail.com
+}
 \date{\today}
 
 % Common packages
@@ -233,7 +236,60 @@
 \section{Perks of Being a Haskeller}
 
 \begin{frame}
+  \frametitle{The Land of Haskell}
 
+  \begin{itemize}
+  \item Laziness lets us define potentially infinite datastructures, e.g. define the whole
+    Fibonacci sequence rather than defining its $n^{th}$ element.
+  \item Since there is no mutation, you can always replace equals by equals, i.e. rewriting code
+    to make it better is easier [called refactoring].
+  \item Do not repeat yourself mantra! Keep it *DRY* silly! Abstraction. Higher Order Functions.
+    [Example mapping over a list] [wholemeal programming]
+  \item Domain Specific Languages are easy to build upon Haskell, e.g. Euterpea for Music,
+    Diagrams for drawing charts and diagams.
+  \item You can prove that your code works! We'll do som simple proofs at the end of the workshop.
+  \item It's a vehicle to learn functional programming techniques. The long term principles.
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{The Land of Haskell}
+
+  Who's using a functional languages?
+
+  \begin{itemize}
+  \item Facebook (Haskell)
+  \item Twitter (Scala)
+  \item Yahooo (Lisp and Erlang)
+  \item Microsoft (GHC FSharp)
+  \item Google (MapReduce)
+  \item Ericsson (Erlang)
+  \item Banks and Trading Firms: Morgan Stanley, Standerd Chartered, Jane Street Capital
+  \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[t]
+  \frametitle{Concepts that languages borrowed from the Functional World}
+
+  \begin{itemize}
+  \item Garbage Collection (Java, Python, Ruby, Javascript)
+  \item Higher Order Functions (Python, Javascript)
+  \item Generics (Java, C++)
+  \item List Comprehensions (Python, Javascript)
+  \end{itemize}
+
+  So, it's reasonable to say that Haskell holds within itself the next big thing.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Time to start Coding}
+  Code, Resources, Slides: \url{https://github.com/narendraj9/fp-nith}
+  IRC: Freenode \#fp@nith
+
+  \center{See you tomorrow!}
 
 \end{frame}
 
