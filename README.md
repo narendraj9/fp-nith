@@ -1,1 +1,1 @@
-Slides for Haskell workshop at NITH
+Slides and code for Haskell workshop at NITH
