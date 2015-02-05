@@ -58,7 +58,7 @@
   \frametitle{Imperative World by Example}
 
   % C code for adding numbers
-  \inputminted[fontsize=\footnotesize,linenos=true]{c}{code/slides/sumfive.c}
+  \inputminted[frame=lines,fontsize=\footnotesize,linenos=true]{c}{code/slides/sumfive.c}
 
   Let's think about it for a while.
 
@@ -74,7 +74,7 @@
   \frametitle{Functional World by Example}
 
   % Haskell code for adding numbers
-  \inputminted[fontsize=\footnotesize,linenos=true]{haskell}{code/slides/SumFive.hs}
+  \inputminted[frame=lines,fontsize=\footnotesize,linenos=true]{haskell}{code/slides/SumFive.hs}
 
   Answers to previous questions for you:
   \begin{itemize}
@@ -90,7 +90,7 @@
   \begin{multicols}{2}
 
     % Left column
-    \inputminted[fontsize=\tiny]{c}{code/slides/sumfive.c}
+    \inputminted[frame=lines,fontsize=\tiny]{c}{code/slides/sumfive.c}
 
     \begin{itemize}
     \item Book-keeping of events in time.
@@ -100,7 +100,7 @@
     \columnbreak
 
     % Right column
-    \inputminted[fontsize=\tiny]{haskell}{code/slides/SumFiveShort.hs}
+    \inputminted[frame=lines,fontsize=\tiny]{haskell}{code/slides/SumFiveShort.hs}
 
     \begin{itemize}
     \item Nice clean functional abstraction.
@@ -117,13 +117,13 @@
 
   % C code
   \emph{Imperative Code}
-  \inputminted[frame=bottomline,fontsize=\footnotesize]{c}{code/slides/primes.c}
+  \inputminted[frame=lines,fontsize=\footnotesize]{c}{code/slides/primes.c}
 
   \vfill
 
   % Haskell code
   \emph{Functional Code}
-  \inputminted[frame=bottomline,fontsize=\footnotesize]{haskell}{code/slides/Primes.hs}
+  \inputminted[frame=lines,fontsize=\footnotesize]{haskell}{code/slides/Primes.hs}
 
 \end{frame}
 
@@ -133,7 +133,7 @@
   \begin{multicols}{2}
     % C code column
     \emph{Imperative Code}
-    \inputminted[fontsize=\tiny]{c}{code/slides/primes.c}
+    \inputminted[frame=lines,fontsize=\tiny]{c}{code/slides/primes.c}
 
     \begin{itemize}
     \item Filtering primes and collecting them interwined. Looks more efficient.
@@ -144,7 +144,7 @@
 
     % Haskell code column
     \emph{Functional Code}
-    \inputminted[fontsize=\tiny]{haskell}{code/slides/Primes.hs}
+    \inputminted[frame=lines,fontsize=\tiny]{haskell}{code/slides/Primes.hs}
 
     \begin{itemize}
     \item First filter primes from the sequence. Then pick two out of them. Perfect!
