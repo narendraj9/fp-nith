@@ -1,0 +1,44 @@
+* General
+  + Compiler
+  + Prelude
+  + Arithmetic
+  + List and fuctions -- head, tail, append, take, drop, length, sum, product, reverse
+  + Function Application -- factorial, average
+  + Layout rule
+  + Writing scripts
+
+* Types and Type classes [Polymorphism]
+  + What's a type?
+  + Char, Float, Double, Integer, Int, Bool, String,
+  + List types
+  + Tuple types
+  + Function types
+  + Polymophism Parametric : See all list functions above
+  + Overloading: Arithmetic [+, -] on Int, Integer, Float
+  + Standard typeclasses: Num, Eq, Ord, Show, Read
+  + Numeric typeclass confusion -- Numeric, Integral, Fractional
+
+* Defining functions
+  + isDigit, even, splitAt | define your functions on lists
+  + Conditionals: absolute value, signum function
+  + Define above using Guards
+  + Tuple and List patterns
+  + Lambda Expressions
+  + Sections
+
+* List comprehensions
+  + Pieces that make up quicksort : All smaller than a value, etc
+  + Implement quicksort now
+
+* zip and zipWith functions
+  + pairs :: [a] -> [(a,a)]
+  + sorted :: [a] -> Bool
+
+* Test Quicksort with Test.QuickCheck
+
+* Caesar Cipher [See People's Interest]
+  frequency Table =
+  [8.2, 1.5, 2.8, 4.3, 12.7, 2.2, 2.0, 6.1, 7.0, 0.2, 0.8
+  , 4.0, 2.4, 6.7, 7.5, 1.9, 0.1, 6.0, 6.3, 9.1, 2.8, 1.0, 2.4, 0.2, 2.0, 0.1]
+
+*
