@@ -1,0 +1,31 @@
+* Revise function definition
+* Explain functions that operate on lists
+* Pattern matching on lists
+* Lambda Expressions
+* Sections 
+
+* Introduce common syntax using the square root function
+  + if else
+  + where clause
+  + let clause
+
+* Give an overview of typeclasses
+  + Imagine a different name for testing equality of Integers, Int, Float, Strings,
+    Tuples and every other possible thing.
+
+* Explain why 1, 2, 3 are shown as Num. They can be Int or Integer. As you specify.
+* Data declarations [Complex Numbers Or Lists Or Vectors{* => dot product]h}
+  + First with function data constructors
+  + Then with infix data constructors
+  + Record syntax
+  + Record updates and pattern matching
+* Typeclasses in detail. Make your own instances.
+  + Equality for lists
+  + Printing lists
+
+
+* SideNote
+  + zip and zipWith
+  + fibonacci sequence and factorial sequence
+  + quicksort 
+  + map, filter and fold

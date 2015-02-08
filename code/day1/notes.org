@@ -19,6 +19,7 @@
   + Numeric typeclass confusion -- Numeric, Integral, Fractional
 
 * Defining functions
+  + Make sure to tell them about data declarations and defining functions on user-defined data
   + isDigit, even, splitAt | define your functions on lists
   + Conditionals: absolute value, signum function
   + Define above using Guards
