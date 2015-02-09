@@ -25,8 +25,6 @@ myreverse (x:xs) = x `f` myreverse xs
 -- Chase the pattern!
 --------------------------------------------------------------------------------
 
-
-
 doubleEach :: Num a => [a] -> [a]
 doubleEach [] = []
 doubleEach (x:xs) = (2*x) : doubleEach xs
@@ -45,7 +43,7 @@ myMap _ [] = []
 myMap f (x:xs) = f x : myMap f xs
 
 --------------------------------------------------------------------------------
---
+-- List comprehensions 
 --------------------------------------------------------------------------------
 -- {x*x : x belongs to {1,2,3,4}}
 -- {1,4,9,16}
@@ -59,9 +57,8 @@ quicksort (x:xs) = (quicksort smallerThanX) ++ [x] ++ (quicksort greaterThanX)
         greaterThanX = [q | q <- xs, q >= x]
 
 --------------------------------------------------------------------------------
---
+-- Chase the pattern
 --------------------------------------------------------------------------------
-
 
 mySum :: Num a => [a] -> a
 mySum [] = 0
@@ -72,6 +69,10 @@ myProduct :: Num a => [a] -> a
 myProduct [] = 1
 myProduct (x:xs) = x * myProduct xs
 
+--------------------------------------------------------------------------------
+-- Let's make folding a list an operation that we are aware of. A more general 
+-- operation than adding or finding the product of the elements.
+--------------------------------------------------------------------------------
 foldIt :: (a -> b -> b) -> b -> [a] -> b
 foldIt f init [] = init
 foldIt f init (x:xs) = x `f` (foldIt f init xs)
@@ -93,11 +94,8 @@ x1 `f` (x2 `f` (x3 `f` ... xn `f` init))
 
 
 --------------------------------------------------------------------------------
--- Chase the patten again!
+-- Chase the pattens! And climb up the Abstraction ladder. That's Life.
 --------------------------------------------------------------------------------
-
-
-
 
 someFunkyFunction :: [a] -> [a] -> [a]
 someFunkyFunction = error "Will define it later"
