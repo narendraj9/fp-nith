@@ -1,0 +1,42 @@
+-----------------------------------------------------------------------------
+---- Syntax & Tools  ~ What's the day?
+-----------------------------------------------------------------------------
++ Review map, filter, foldr, foldl --> Tick Tick!
+* Familiarty with data declarations
+  + Explain each part of a data declaration Properly! You didn't do it properly last time.
+  + Explain how exactly (Maybe a) has been defined in the Prelude.
+  + Record syntax [Just a side note. Conveience.]
+  + Explain what a tree is. Define a tree.
+  + Define a few functions on trees. treeSize. treeMap. treeSum. treeDepth. flatten.
+  + Define anotherFold for tree. Explain folding as a general concept.
+* Defining your own typeclasses
+  Examples: Listable typeclass
+* IO in Haskell
+  + How to do IO in a language that has functions that
+    + Do nothing apart from computing their result, i.e. no side effects
+    + Don't depend on anything other than their inputs. Same inputs => Same output
+  + (IO a) to the rescue
+    + Inert simple pure *description* of a process that does something. Not the doing of the thing.
+  + Generating IO computations
+    putStrLn :: String -> IO ()
+    getLine :: IO String
+  + Combining IO values
+    (>>) :: IO a -> IO b -> IO b
+    (>>=) :: IO a -> (a -> IO b) -> IO b
+
+------------------------------------------------------------------------------
+-- Welcome to Intermediate/Advanced Haskell Programming, aka Glory
+------------------------------------------------------------------------------
+* Typeclassopaedia [A new world of Words]
+  + Monoid
+    - What's a Monoid?
+    - Examples: numbers and addition
+                numbers and multiplication
+                diagrams and super-imposition / overlaying
+  + Functor
+    - Remind all the maps we have used so far.
+    - Talk about kinds. A Functor has the kinds (* -> *).
+  + Applicative Functor
+    - error "To be planned."
+  + Monad
+    - error "To be planned."
