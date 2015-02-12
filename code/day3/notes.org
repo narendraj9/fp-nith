@@ -34,7 +34,7 @@
                 numbers and multiplication
                 diagrams and super-imposition / overlaying
   + Functor
-    - Remind all the maps we have used so far.
+    - Remember all the maps we have used so far?
     - Talk about kinds. A Functor has the kinds (* -> *).
   + Applicative Functor
     - error "To be planned."
