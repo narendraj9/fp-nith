@@ -19,7 +19,10 @@ betterSum xs = helper xs 0
 myreverse :: [a] -> [a]
 myreverse [] = []
 myreverse (x:xs) = x `f` myreverse xs
-                   where f x ys = ys ++ [x]
+                   where { f x ys = ys ++ [x];
+                           g y = y;
+                         }
+
 
 --------------------------------------------------------------------------------
 -- Chase the pattern!
@@ -43,7 +46,7 @@ myMap _ [] = []
 myMap f (x:xs) = f x : myMap f xs
 
 --------------------------------------------------------------------------------
--- List comprehensions 
+-- List comprehensions
 --------------------------------------------------------------------------------
 -- {x*x : x belongs to {1,2,3,4}}
 -- {1,4,9,16}
@@ -70,7 +73,7 @@ myProduct [] = 1
 myProduct (x:xs) = x * myProduct xs
 
 --------------------------------------------------------------------------------
--- Let's make folding a list an operation that we are aware of. A more general 
+-- Let's make folding a list an operation that we are aware of. A more general
 -- operation than adding or finding the product of the elements.
 --------------------------------------------------------------------------------
 foldIt :: (a -> b -> b) -> b -> [a] -> b
@@ -161,7 +164,7 @@ data List a = Nil | a :+ (List a)
 instance Show a => Show (List a) where
   show Nil = "[]"
   show (x :+ xs) = "[" ++ show x ++ restOfString
-                        where restOfString = case xs of 
+                        where restOfString = case xs of
                                                 Nil -> "]"
                                                 _ -> "," ++ tail (show xs)
 
@@ -184,7 +187,6 @@ instance Num a => Num (Complex a) where
 
   abs (x `PlusI` y) = (x*x + y*y) `PlusI` 0
 
-  signum x = error "We don't know what that means." 
+  signum x = error "We don't know what that means."
   fromInteger x = (fromInteger x) `PlusI` (fromInteger 0)
   negate (x `PlusI` y) = (-x) `PlusI` (-y)
-
