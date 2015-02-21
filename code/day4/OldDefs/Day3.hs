@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
 -- Day 3
 --------------------------------------------------------------------------------
-module Day3 where
+module OldDefs.Day3 where
 
 data Color = Blue | Green | Red deriving (Show, Eq)
-data List a = Nil | Cons a (List a)
+data List a = Nil | Cons a (List a) deriving Show
 data Complex a = a `PlusI` a
 
 --------------------------------------------------------------------------------

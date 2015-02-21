@@ -37,6 +37,7 @@
     - Remember all the maps we have used so far?
     - Talk about kinds. A Functor has the kinds (* -> *).
   + Applicative Functor
-    - error "To be planned."
+    - Functors for functions of more than one argument
+    - Context {Maybe, List, Reader}
   + Monad
-    - error "To be planned."
+    - Parsers

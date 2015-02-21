@@ -1,0 +1,21 @@
+   * Diagrams | Pictures and Animation
+
+   * Euterpea | Music [Note Level and Signal Level]
+
+   * Parallel and Concurrent Haskell | Speed and Computing
+
+   * Purely Functional Data Structures | Algorithms & Data Strucutres in a Purely Functional Setting
+
+   * Testing in Haskell | QuickCheck (Randomized) and HUnit (Manual Unit tests)
+
+
+===================================================================================================
+---------------------------------------------------------------------------------------------------
+
+* Category Theory and Lambda Calculus
+
+* Lenses, Folds and Traversals
+
+* Web development with Haskell
+
+---------------------------------------------------------------------------------------------------

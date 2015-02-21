@@ -1,0 +1,28 @@
+* General Introduction to Abstraction
+** Data vs Computation
+  + Higher Order Types | Higher Order Functions
+  + Generality at the right Granularity | Exploit specific properties.
+** How to explain this?
+    Higher order types are types with some common feature (structure) , e.g. lists are linear
+    and trees are hierarchical. There is some kind of structure here. So, there are properties
+    that are a consequence of this structure, e.g. a list has a length and a tree has height.
+    So, we can have functions that inspect this structure rather than the values filled within
+    the structure. We call them higher order functions. Now, why not make this structure some kind
+    of type. The context something similar to a type. (Tree) or [] | Not (Tree a) or [a]
+* Functors
+  + typeclass definition
+  + Think of all the maps -- listMap, treeMap
+  + Derive a few Functor instances -- List, Maybe, Tree?
+  + < Intuition >
+  + IO instance
+  + (->e) Reader instance | Mind-bending.
+  + Now, remove the intuition. Intuition is a consequence of practise and observation.
+    *Starting out* with intuition may lead to a restricted view of the world.
+* Applicative Functors
+  + Example (PersonB) | Need
+  + Similarity with Functors
+  + typeclass defintion
+* Monads
+  + typeclass definition
+  + Why Monads?
+  + Start with Parsers
