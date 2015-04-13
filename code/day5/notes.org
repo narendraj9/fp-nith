@@ -1,0 +1,23 @@
+* Review Functors
+  + Class definition
+  + Examples of functors
+    + fmap f [1..10]    | Container intuition
+    + inc `fmap` (Just 12) | Container and Contextual intuition
+    + words `fmap` getLine | Contextual intuition
+      length `fmap` getLine
+  + Functor laws
+      + fmap id = id
+      + fmap (f . g) = (fmap f) . (fmap g)
+* Applicative Functors
+  + Origin [lifting functions of more than one parameter leads to contextual application]
+    Paper: Applicative Programming with Effects
+  + Examples
+    - (+) liftted to Maybe world. e.g. fmap ( + ) (Just 2) (Just 4)
+    - zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]. Generalize to n arguments.
+    - (++) lifted to IO: (++) <$> getLine <*> getLine
+    -  (++) <$> ["ha", "heh", "hmm"]  <*> ["!", ".", "?"]
+  + class definition
+  + Applicative Laws
+    Important: fmap f fa = pure f <*> fa
+* Monads
+* Monoids

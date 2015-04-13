@@ -16,7 +16,7 @@
   + < Intuition >
   + IO instance
   + (->e) Reader instance | Mind-bending.
-  + Now, remove the intuition. Intuition is a consequence of practise and observation.
+  + Now, remove the intuition. Intuition is a consequence of practice and observation.
     *Starting out* with intuition may lead to a restricted view of the world.
 * Applicative Functors
   + Example (PersonB) | Need
